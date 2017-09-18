@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>JQuery convert to raw dom object</title>
+</head>
+<body>
+  <div>click me </div>
+  <div class="test">test</div>
+  <div>click me</div>
+<script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/Javascript">
+  (function($) {
+    $(document).ready(function() {
+      $('div').click(function() {
+        alert("You clicked on div with an index of " + $("div").index(this));
+      });
+    });
+  })(jQuery);
+</script>
+</body>
+</html>
