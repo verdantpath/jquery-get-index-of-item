@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>JQuery convert to raw dom object</title>
+<title>JQuery get index of item</title>
 </head>
 <body>
   <div>click me </div>
@@ -14,6 +14,14 @@
     $(document).ready(function() {
       $('div').click(function() {
         alert("You clicked on div with an index of " + $("div").index(this));
+      });
+      var test = $('div.test');
+      $('div').each(function(i) {
+        if ($(this).index(test) >= 0) {
+          console.log("good");
+        } else {
+          console.log("not good");
+        }
       });
     });
   })(jQuery);
